@@ -10,6 +10,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	// serves all url inlcude /up required by kamal
 	http.HandleFunc("/", handler)
 	err := http.ListenAndServe(":80", nil)
 	if err != nil {
